@@ -38,7 +38,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+                <img class="masthead-avatar mb-5" id="avatar_img" src="images/its_me.jpg" alt="..." />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Daniel Thai</h1>
                 <!-- Icon Divider-->
@@ -52,12 +52,13 @@
             </div>
         </header>
          <!-- About Section-->
-         <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
+         <section class="page-section text-secondary mb-0" id="about">
+            <div class="container" >
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary">About</h2>
+                <!-- page-section-heading text-center text-uppercase text-secondary mb-0 -->
                 <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
+                <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
@@ -66,23 +67,25 @@
                 <div class="row">
                     <div class="col-lg-4 ms-auto"><p class="lead">What does a software engineer's diet look like? Lots of bugs. Before becoming a software engineer, I worked as a lab technician testing for food pathogens. During my free time at the time, I was exploring coding for fun and quickly decided I wanted to pivot my career into engineering.</p></div>
                     <div class="col-lg-4 me-auto"><p class="lead">I am a graduate of App Academy 24 weeks full time software engineering program. During the program, I learned JavaScript, React, Express, Python, and many more technologies for web development. Combined with experiance and skills from my previous jobs, I bring a solid skillset to a collaborative workspace as a well-rounded software engineer!</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">When I'm not coding, I enjoy going out and about trying new food and restaurants. I have a lot of fun experimenting with cooking although I'm not the best cook. I also really enjoy playing a large variety of video games late into the night. </p></div>
+
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                    <a class="btn btn-xl btn-outline-secondary" href="/documents/Daniel_Thai_Resume_2022.pdf" target="_blank" >
                         <i class="fas fa-download me-2"></i>
-                        Free Download!
+                        Resume
                     </a>
                 </div>
             </div>
         </section>
         <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="portfolio">
+        <section class="page-section bg-primary portfolio " id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Portfolio</h2>
                 <!-- Icon Divider-->
-                <div class="divider-custom">
+                <div class="divider-custom divider-light"">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
@@ -95,7 +98,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <a class="img-fluid" href="https://cheap-bnb.herokuapp.com/" alt="..." />
+                            <img class="img-fluid" src="/images/cheapbnb.PNG" alt="cheapbnb" />
                         </div>
                     </div>
                     <!-- Portfolio Item 2-->
@@ -104,7 +107,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <a class="img-fluid" href="https://cheatsheets-group-project.herokuapp.com/" alt="..." />
+                            <img class="img-fluid" src="/images/cheatsheets.PNG" alt="cheapbnb" />
                         </div>
                     </div>
                     <!-- Portfolio Item 3-->
@@ -113,7 +116,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <a class="img-fluid" href="https://loudcloud-app.herokuapp.com/" alt="..." />
+                            <img class="img-fluid" src="/images/loudcloud.PNG" alt="cheapbnb" />
                         </div>
                     </div>
                     <!-- Portfolio Item 4-->
@@ -122,7 +125,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <a class="img-fluid" href="https://goodwatch-app.herokuapp.com/" alt="..." />
+                            <img class="img-fluid" src="/images/goodwatch.PNG" alt="cheapbnb" />
                         </div>
                     </div>
                 </div>
@@ -142,61 +145,7 @@
                 </div>
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
-                        </form>
-                    </div>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAltBp4KcnCqOag6YBappUC1o4mNl1Bq2ymAb-MbajYBEXzw/viewform?embedded=true" width="640" height="812" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
             </div>
         </section>
@@ -205,37 +154,21 @@
             <div class="container">
                 <div class="row">
                     <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            2215 John Daniel Drive
-                            <br />
-                            Clark, MO 65243
-                        </p>
-                    </div>
                     <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="row justify-content-center mb-5 mt-5 mb-lg-0 text-center">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/daniel--thai/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/daniel--thai/" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/daniel--thai/" target="_blank"><i class="fab fa-angellist"></i></a>
+
                     </div>
                     <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
-                    </div>
                 </div>
             </div>
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Your Website 2022</small></div>
+            <div class="container"><small> &copy Copyright All Rights Reserved</small></div>
         </div>
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
@@ -256,13 +189,10 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="/images/cheapbnb.PNG" alt="cheapbnb" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
+                                    <p class="mb-4">My App Academy capstone project, Cheapbnb was inspired by the popular vacation rental platform Airbnb. This app was built with Javascript, Python, Node.js, Flask, React / Redux, SQLAlchemy, PostgreSQL, and AWS S3 in the span of two weeks' time.</p>
+                                    <a class="btn btn-primary" href="https://cheap-bnb.herokuapp.com/" target="_blank"> Live Site </a>
                                 </div>
                             </div>
                         </div>
@@ -288,13 +218,10 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="images/cheatsheets.PNG" alt="cheatsheets" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
+                                    <p class="mb-4">Cheatsheets was inspired by 'Instructables' which is a platform for creating step-by-step instructions on how to create things. This was a group project built with Javascript, Python, Node.js, Flask, React / Redux, SQLAlchemy, PostgreSQL, and AWS S3 while practicing version control as a team of engineers.</p>
+                                    <a class="btn btn-primary" href="https://cheatsheets-group-project.herokuapp.com/" target="_blank"> Live Site </a>
                                 </div>
                             </div>
                         </div>
@@ -320,13 +247,10 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="images/loudcloud.PNG" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
+                                    <p class="mb-4">LoudCloud, inspired by popular music streaming platform SoundCloud. This full-stack project was built in one week's time to exercise and demonstrate my skills with JavaScript, CSS, React / Redux for the frontend, and Express, Sequelize, and PostgreSQL for the backend.</p>
+                                    <a class="btn btn-primary" href="https://loudcloud-app.herokuapp.com/" target="_blank"> Live Site </a>
                                 </div>
                             </div>
                         </div>
@@ -352,13 +276,10 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="images/goodwatch.PNG" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
+                                    <p class="mb-4">This was my very first web app I've built acting as the scrum master and collaborated with three other colleagues using Git version controls. Goodwatch is inspired by GoodReads but with a spin-up where users can write reviews and post discussions on shows. On the website you can leave discussions about a show and rate it. This was Built with JavaScript, Express, Pug, PostgreSQL, and CSS.</p>
+                                    <a class="btn btn-primary" href="https://goodwatch-app.herokuapp.com/" target="_blank"> Live Site </a>
                                 </div>
                             </div>
                         </div>

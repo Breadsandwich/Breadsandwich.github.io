@@ -11507,3 +11507,10 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+#avatar_img {
+  height: 300px;
+  border-radius: 30%;
+}
+
+
